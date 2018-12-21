@@ -40,7 +40,7 @@ end
 
 def hit?(card_total)
   prompt_user
-  
+
   input = get_user_input
   if input == "s"
     card_total
@@ -48,7 +48,7 @@ def hit?(card_total)
      card_total += deal_card
     return card_total
   else
-    hit?(card_total) # <-- recursion; loop them back to line 2 
+    hit?(card_total) # <-- recursion; loop them back to line 2
   end
 end
 
@@ -64,7 +64,7 @@ end
 def runner
   # code runner here
   welcome
-   card_total = initial_round
+  card_total = initial_round
 
   until card_total > 21
     card_total = hit?(card_total)
